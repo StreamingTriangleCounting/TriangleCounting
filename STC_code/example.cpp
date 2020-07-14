@@ -17,7 +17,7 @@ int main()
 	unsigned long s, d;
 	long long t;
 	double time_unit=3.775;
-	for (int gap = 35000000; gap <36000000; gap += 1000000)
+	for (int gap = 4000000; gap <5000000; gap += 100000)
 	{
 		int count = 0;
 		int wsize = gap*time_unit;
@@ -25,7 +25,7 @@ int main()
 		ifstream fin("stackoverflow.txt");
 		string index = "stack_4%_";
 		stringstream ss;
-		ss<<(gap/1000000);
+		ss<<(gap/100000);
 		string str;
 		ss>>str;
 		ss.clear();
@@ -65,8 +65,8 @@ int main()
 				tmp = count/checkpoint;
 				if(tmp>0)
 				{
-				fout<<"tc triangle "<< tc->st->valid_num <<' '<<tc->st->edge_count<<' '<<tc->st->trcount<<' '<<tc->count()<<' '<<tc->edge_estimate<<endl;
-				fout<<"BPS triangle "<<bc->st->valid_num<<' '<<bc->st->edge_count<<' '<<bc->st->trcount<<' '<<bc->count()<<' '<<bc->edge_estimate<<endl;
+				fout<<"tc triangle "<< tc->st->valid_num <<' '<<tc->count()<<endl;
+				fout<<"BPS triangle "<<bc->st->valid_num<<' '<<bc->count()<<endl;
 				fout<<"standard count "<<gc->edge_count()<<' '<<gc->triangle_count()<<endl;
 				fout<<endl;
 				}
