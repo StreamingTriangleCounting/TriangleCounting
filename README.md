@@ -18,7 +18,7 @@ weighted-baseline contains the structure of baseline for weighted counting. The 
 Golden contains the structure used for computing accurate triangle count. The head file GoldenCounter.h defines class GoldenCounter. It mainly has 3 functions. the initialization
 function GoldenCounter(int w), where w is the size of the sliding window.  Insertion function insert_edge(string s, string d, long time), and triangle_count() which returns the triangle number.
 
-weighted
+weighted-Golden contains the structure used for computing accurate weighted triangle count. The files, classes and functions are organizetion in the same manner as Golden.
 
 common_structure contains structs, classes and functions shared by all the above algorithms.
 
