@@ -28,14 +28,18 @@ which means their max sample size is 0.04 of the sliding window size.
 The result is output as "stack_4%_xx" where xx is  (sliding window size)/0.1M. Each output file contains 100 checkpoints, and each checkpoint contains the following 3 lines:
 
 "tc triangle "   (the valid sample size of SWTC)  (the triangle estimation of SWTC)
+
 "BPS triangle "   (the valid sample size of baseline)  (the triangle estimation of baseline)
+
 "standard count " (the distinct edges in the sliding window) (the accurate triangle count in the sliding window).
 
 
 The data are not uploaded to Github, as they are too large. But we give the link of the 3 datasets as follows:
 
 Wikipedia:  http://konect.uni-koblenz.de/networks/dbpedia-link
+
 stackoverflow : http://snap.stanford.edu/data/sx-stackoverflow.html
+
 yahoo: https://webscope.sandbox.yahoo.com/catalog.php?datatype=g
 
 
