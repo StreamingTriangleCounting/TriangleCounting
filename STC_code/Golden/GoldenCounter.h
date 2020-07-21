@@ -76,7 +76,7 @@ class GoldenCounter
 			if (tsl_tail)
 				tsl_tail->next = e;
 			tsl_tail = e;
-		//	graph->insert_edge(s, d);
+			graph->insert_edge(s, d);
 			
 			timed_edge* cur = tsl_head;
 			timed_edge* next;
@@ -84,7 +84,7 @@ class GoldenCounter
 			{
 				edgenum--;
 				next = cur->next;
-		//		graph->delete_edge(cur->s, cur->d);
+				graph->delete_edge(cur->s, cur->d);
 				delete cur;
 				cur = next;
 				tsl_head = next;
