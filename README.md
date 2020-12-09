@@ -42,6 +42,8 @@ stackoverflow : http://snap.stanford.edu/data/sx-stackoverflow.html
 
 yahoo: https://webscope.sandbox.yahoo.com/catalog.php?datatype=g
 
+actor: http://konect.cc/
+
 The dataset need to be sorted according to timestamps first.
 
 Note that counting accurate triangle count is time consuming therefore the example.cpp takes a long time to finish.
