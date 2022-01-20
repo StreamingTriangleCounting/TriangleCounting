@@ -13,11 +13,17 @@ It cantains codes of SWTC. It is further divided into 4 directories:
 
 **undirected**: SWTC-codes for undirected, binary counting. There are 4 files:
 sample.h: code of sample class, which is a SWTC-sampler. It has 6 interfaces:
+
 void sample(int size, int w, int hi): initialization of the sampler. size is the number of substreams, k. w is the window length (N multiplies the time unit, which is the average time span of the dataset), and hi is the hashindex. Change hi from 0 to 10 will enable the SWTC to be implemented with different hash functions.
+
 void proceed(unsigned int s, unsigned int d, long long time): proceed an undirected edge (s, d) with timestamp time. Current time T will be updated to parameter time.
+
 void prepare(): make preparations for querying, need to be called before calling of the following functions.
+
 int count(), return the estimated global triangle count.
+
 int local_count(unsigned int v): return the local count of node v.
+
 void all_local(unordered_map<unsigned int, int> &cr), store local count of all sampled nodes in cr as <node ID， local count> pair. Nodes not in the sampled graph is not reported. The estimated local count of these nodes is 0.
 
 sampletable.h: code of SampleTable class, which maintaings the sample graph and is the major component of sample class.
